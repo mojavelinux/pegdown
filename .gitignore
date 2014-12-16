@@ -1,4 +1,6 @@
+/.gradle/
 /.idea/
+/build/
 /project/boot/
 /project/plugins/project
 target/

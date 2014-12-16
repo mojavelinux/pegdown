@@ -8,8 +8,10 @@ import org.parboiled.common.FileUtils
 import java.util.Collections
 import scala.collection.immutable.HashMap
 import plugins.{ToHtmlSerializerPlugin, PegDownPlugins}
+import org.junit.runner.RunWith
+import org.specs2.runner.JUnitRunner
 
-
+@RunWith(classOf[JUnitRunner])
 class PegDownSpec extends AbstractPegDownSpec {
 
   "The PegDownProcessor" should {

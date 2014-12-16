@@ -1,0 +1,31 @@
+group = 'org.pegdown'
+version = '1.4.2'
+description = 'A Java 1.5+ library providing a clean and lightweight markdown processor'
+
+apply plugin: 'java'
+apply plugin: 'scala'
+
+repositories {
+  mavenCentral()
+}
+
+dependencies {
+  compile 'org.parboiled:parboiled-java:1.1.6'
+  testCompile 'junit:junit:4.12'
+  testCompile 'org.specs2:specs2_2.9.3:1.12.4.1'
+  testCompile 'net.sf.jtidy:jtidy:r938'
+}
+
+compileJava {
+  sourceCompatibility = targetCompatibility = 1.5
+  options.compilerArgs = ['-Xlint:unchecked']
+  options.debug = true
+  options.deprecation = true
+  options.encoding = 'utf8'
+}
+
+compileTestScala {
+  scalaCompileOptions.encoding = 'utf8'
+  scalaCompileOptions.deprecation = true
+  scalaCompileOptions.unchecked = true
+}
